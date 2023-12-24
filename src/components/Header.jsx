@@ -6,12 +6,12 @@ export default function Header() {
   const [isOpen, setOpen] = useState(false)
   
   return (
-    <header className='w-full h-20 flex justify-between items-center shadow-md '>
-      <div id='logo' className='md:pl-10 pl-5'>
+    <header className='w-full h-20 flex justify-between items-center shadow-lg '>
+      <div id='logo' className='lg:pl-10 pl-5'>
         <h1>LOGO</h1>
       </div>
-      <nav className={`md:shadow-none shadow-md md:pr-10 flex justify-center items-center p-6 md:bg-white bg-gray-200 md:static absolute md:w-auto md:z-auto z-[1] w-full  transition-all duration-500 ease-in top-[83px] ${isOpen ? 'left-0 ' : 'md:left-0 left-[-790px]'}`}>
-        <ul className='flex md:flex-row flex-col justify-center items-center gap-10'>
+      <nav className={`lg:shadow-none shadow-lg lg:pr-10 flex justify-center items-center p-6 lg:bg-white bg-gray-200 lg:static absolute lg:w-auto lg:z-auto z-[1] w-full  transition-all duration-500 ease-in top-[83px] ${isOpen ? 'left-0 ' : 'lg:left-0 left-[-790px]'}`}>
+        <ul className='flex lg:flex-row flex-col justify-center items-center gap-10'>
           {
             navLinks.map((navlink) => (
               <li key={navlink.name}><a href='#'>{navlink.name}</a></li>
@@ -21,7 +21,7 @@ export default function Header() {
         </ul>
       </nav>
 
-      <div className='md:hidden block pr-3'>
+      <div className='lg:hidden block pr-3'>
         <Hamburger onToggle={() => {
           setOpen(!isOpen)
         }} />
@@ -29,6 +29,3 @@ export default function Header() {
     </header>
   )
 }
-
-
-// ${isOpen ? 'top-20 ':'top-[-490px]'}
