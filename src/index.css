@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
- section, #heroSection {
+
+section,
+#heroSection {
     padding: 10px 40px;
 }

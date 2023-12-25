@@ -1,5 +1,8 @@
-@media screen and (max-width : 768px) {
-    header {
-        /* background-color: aqua !important; */
-    }
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Kanit:wght@300&family=Noto+Sans:ital,wght@0,400;0,700;1,300&family=Roboto&family=Rubik&display=swap');
+body {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
