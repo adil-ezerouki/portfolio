@@ -21,7 +21,7 @@ export default function Hero() {
 
 
             <h1 className='lg:text-5xl text-4xl' ref={typeTarget}>
-            <Typed 
+              <Typed
                 strings={[
                   "Front-end Dev",
                   "Back-end Dev",
@@ -31,18 +31,14 @@ export default function Hero() {
                 typeSpeed={100}
                 backSpeed={100}
                 loop
-              
+
               />
             </h1>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Exercitationem sapiente rerum aspernatur! Consequuntur in
-            incidunt consequatur aspernatur aperiam molestiae autem rem
-            corporis deleniti, ea facere consectetur blanditiis obcaecati
-            nesciunt harum?</p>
+          <p className='lg:text-xl'>Hey there! I'm a web developer who's passionate about creating user-friendly and visually appealing websites. Let's collaborate to turn your ideas into a standout online experience!</p>
           <div id='btns' className='flex lg:flex-row flex-col gap-4'>
             <button className='bg-[#177771] text-white px-6 py-3 rounded-full' type='button'>DOWNLOAD CV</button>
-            <button className='border border-[#177771] text-[#177771] px-6 py-3 rounded-full' type='button'>VIEW PORTFOLIO</button>
+            <button className='border border-[#FF7F40] text-[#FF7F40] hover:bg-[#FF7F40] hover:text-[#fff] hover:transition-all px-6 py-3 rounded-full' type='button'>VIEW PORTFOLIO</button>
           </div>
         </div>
         <div id='rightPart' className=''>
