@@ -7,7 +7,7 @@ export default function Hero() {
   console.log(new Typed)
 
   return (
-    <div id='heroSection' className=''>
+    <div id='heroSection' className='transition-all duration-500 ease-in mt-20'>
       <div className='flex lg:flex-row flex-col-reverse justify-between items-center'>
         <div id='leftPart' className=' lg:w-[50%] lg:text-left text-center flex flex-col gap-4 lg:items-start items-center'>
           <div className='flex gap-2'>
@@ -37,8 +37,8 @@ export default function Hero() {
           </div>
           <p className='lg:text-xl'>Hey there! I'm a web developer who's passionate about creating user-friendly and visually appealing websites. Let's collaborate to turn your ideas into a standout online experience!</p>
           <div id='btns' className='flex lg:flex-row flex-col gap-4'>
-            <button className='bg-[#177771] text-white px-6 py-3 rounded-full' type='button'>DOWNLOAD CV</button>
-            <button className='border border-[#FF7F40] text-[#FF7F40] hover:bg-[#FF7F40] hover:text-[#fff] hover:transition-all px-6 py-3 rounded-full' type='button'>VIEW PORTFOLIO</button>
+            <button className='bg-[#177771] text-white px-6 py-3 rounded-full hover:scale-[1.1]  duration-500 ease-in-out' type='button'>DOWNLOAD CV</button>
+            <button className='border border-[#FF7F40] text-[#FF7F40] hover:bg-[#FF7F40] hover:text-[#fff]  px-6 py-3 rounded-full hover:scale-[1.1] transition-all duration-500 ease-in-out' type='button'>VIEW PORTFOLIO</button>
           </div>
         </div>
         <div id='rightPart' className=''>
