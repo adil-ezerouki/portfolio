@@ -1,13 +1,16 @@
 import React, { useRef } from 'react'
-import img from '../assets/adil1.png'
+import img from '../../assets/adil1.png'
 import Typed from 'react-typed'
+import aboutMe from '../../data/aboutMe.json'
 
 export default function Hero() {
   const typeTarget = useRef(null);
-  console.log(new Typed)
+
+
+  console.log()
 
   return (
-    <div id='heroSection' className='transition-all duration-500 ease-in mt-20'>
+    <div ref={typeTarget} id='heroSection' className='transition-all duration-500 ease-in lg:mt-24 mt-[67px]'>
       <div className='flex lg:flex-row flex-col-reverse justify-between items-center'>
         <div id='leftPart' className=' lg:w-[50%] lg:text-left text-center flex flex-col gap-4 lg:items-start items-center'>
           <div className='flex gap-2'>
@@ -16,17 +19,13 @@ export default function Hero() {
           </div>
           <div id='nameANDprofession'>
             <div className='lg:text-5xl text-4xl'>
-              I'm <span className='text-[#FF7F40]'>Adil</span> <span className='text-[#177771]'>Ezerouki</span>
+              I'm <span className='text-[#FF7F40]'>{aboutMe[0].firstName}</span> <span className='text-[#177771]'>{aboutMe[0].lastName}</span>
             </div>
 
 
-            <h1 className='lg:text-5xl text-4xl' ref={typeTarget}>
+            <h1 className='lg:text-5xl text-4xl' >
               <Typed
-                strings={[
-                  "Front-end Dev",
-                  "Back-end Dev",
-                  "Full-stack Dev",
-                ]}
+                strings={aboutMe[0].profession}
 
                 typeSpeed={100}
                 backSpeed={100}
@@ -35,7 +34,7 @@ export default function Hero() {
               />
             </h1>
           </div>
-          <p className='lg:text-xl'>Hey there! I'm a web developer who's passionate about creating user-friendly and visually appealing websites. Let's collaborate to turn your ideas into a standout online experience!</p>
+          <p className='lg:text-xl'>{aboutMe[0].description}</p>
           <div id='btns' className='flex lg:flex-row flex-col gap-4'>
             <button className='bg-[#177771] text-white px-6 py-3 rounded-full hover:scale-[1.1]  duration-500 ease-in-out' type='button'>DOWNLOAD CV</button>
             <button className='border border-[#FF7F40] text-[#FF7F40] hover:bg-[#FF7F40] hover:text-[#fff]  px-6 py-3 rounded-full hover:scale-[1.1] transition-all duration-500 ease-in-out' type='button'>VIEW PORTFOLIO</button>

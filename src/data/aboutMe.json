@@ -1,0 +1,40 @@
+[
+    {
+        "firstName": "Adil",
+        "lastName": "Ezerouki",
+        "PhoneNumber": "+212 633 299 624",
+        "email": "adil.ezerouki@gmail.com",
+        "social_media": {
+            "whatsapp": "https://api.whatsapp.com/send?phone=2120633299624",
+            "linkedIn": "https://www.linkedin.com/in/adil-ezerouki-58081b189/",
+            "github": "https://github.com/adil-ezerouki"
+        },
+        "profession": [
+            "Front-end Dev",
+            "Back-end Dev",
+            "Full-stack Dev"
+        ],
+        "description": "Hey there! I'm a web developer who's passionate about creating user-friendly and visually appealing websites. Let's collaborate to turn your ideas into a standout online experience!",
+        "technologies": {
+            "front-end": [
+                "Html",
+                "Css",
+                "Bootstrap",
+                "Tailwind",
+                "Javascript",
+                "React",
+                "Jquery"
+            ],
+            "back-end": [
+                "Php",
+                "Laravel"
+            ],
+            "database": [
+                "Sql",
+                "Mysql",
+                "Nosql",
+                "MongoDB"
+            ]
+        }
+    }
+]
