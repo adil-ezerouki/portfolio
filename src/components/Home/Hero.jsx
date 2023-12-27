@@ -10,7 +10,7 @@ export default function Hero() {
   console.log()
 
   return (
-    <div ref={typeTarget} id='heroSection' className='transition-all duration-500 ease-in lg:mt-24 mt-[67px]'>
+    <div ref={typeTarget} id='heroSection' className='transition-all duration-500 ease-in lg:mt-24 lg:py-20 mt-[67px]'>
       <div className='flex lg:flex-row flex-col-reverse justify-between items-center'>
         <div id='leftPart' className=' lg:w-[50%] lg:text-left text-center flex flex-col gap-4 lg:items-start items-center'>
           <div className='flex gap-2'>

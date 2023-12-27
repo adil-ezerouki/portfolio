@@ -12,6 +12,29 @@ export default function Header() {
   const [isDarkMode, setDarkMode] = useState(localStorage.getItem('darkMode') === "true");
   const body = document.querySelector('body')
 
+  useEffect(() => {
+    const ul = document.querySelectorAll("ul li")
+
+    ul[0].className = 'bg-[#FF7F40] text-white py-2 px-3 rounded-md transition-all duration-100 ease-in'
+    window.onscroll = function () {
+      var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+      for (let i = 0; i < navLinks.length; i++) {
+        if (scrollPosition >= (navLinks[i].viewport.from) && scrollPosition <= (navLinks[i].viewport.to)) {
+          ul.forEach((li) => {
+            li.className = "hover:bg-[#FF7F40] hover:text-white hover:py-2 hover:px-3 rounded-md transition-all duration-100 ease-in"
+          })
+
+          ul[i].className = 'bg-[#FF7F40] text-white py-2 px-3 rounded-md transition-all duration-100 ease-in'
+        }
+      }
+
+
+    };
+  })
+
+
+
 
   if (!(localStorage.getItem('darkMode'))) {
     localStorage.setItem('darkMode', isDarkMode);
@@ -27,10 +50,11 @@ export default function Header() {
       body.style.backgroundColor = 'white';
       body.style.color = 'black';
     }
+
+
   }, [isDarkMode])
 
 
-  // lg:pl-10 pl-5
 
 
   return (
@@ -45,7 +69,7 @@ export default function Header() {
               <li className='hover:bg-[#FF7F40] hover:text-white hover:py-2 hover:px-3 rounded-md transition-all duration-100 ease-in' key={navlink.name}><a href='#'>{navlink.name}</a></li>
             ))
           }
-          <li><a className='border border-[#FF7F40] text-[#FF7F40] hover:bg-[#FF7F40] hover:text-[#fff] hover:transition-all px-4 py-2 rounded-full' href={aboutMe[0].social_media.whatsapp}>contact me</a></li>
+          <button><a className='border border-[#FF7F40] text-[#FF7F40] hover:bg-[#FF7F40] hover:text-[#fff] hover:transition-all px-4 py-2 rounded-full' href={aboutMe[0].social_media.whatsapp}>contact me</a></button>
           <div className='lg:block hidden' id='darkMode'>
             <img onClick={() => setDarkMode(!isDarkMode)} className='w-10 cursor-pointer active:scale-[1.4] hover:scale-[1.2] hover:duration-100 transition-all duration-500 ease-in' src={!isDarkMode ? lightMode : darkMode} alt="dark_light_mode" />
           </div>
