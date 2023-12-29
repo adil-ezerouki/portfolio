@@ -10,10 +10,11 @@
             "github": "https://github.com/adil-ezerouki"
         },
         "profession": [
-            "Front-end Dev",
-            "Back-end Dev",
-            "Full-stack Dev"
+            "Front-End Dev",
+            "Back-End Dev",
+            "Full-Stack Dev"
         ],
+        "slogan" : "Coding Dreams into Reality Where Imagination Meets Innovation",
         "description": "Hey there! I'm a web developer who's passionate about creating user-friendly and visually appealing websites. Let's collaborate to turn your ideas into a standout online experience!",
         "technologies": {
             "front-end": [

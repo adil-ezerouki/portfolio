@@ -5,8 +5,10 @@ import Hero from './Hero'
 export default function Home() {
   return (
     <>
+    <div id='home'>
       <Header />
       <Hero />
+      </div>
     </>
   )
 }
