@@ -1,9 +1,55 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import img from '../../assets/adil1.png'
 import Typed from 'react-typed'
 import aboutMe from '../../data/aboutMe.json'
 
 export default function Hero() {
+  const body = document.querySelector('body')
+
+  const toTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+
+  const toBottom = () => {
+    window.scrollTo({
+      top: body.clientHeight,
+      behavior: "smooth"
+    });
+  }
+
+  useEffect(() => {
+    const upANDdownBtns = document.querySelectorAll(' .directionBtn ')
+
+    window.addEventListener('scroll', () => {
+      upANDdownBtns.forEach(btn => {
+        btn.style.display = 'none';
+      })
+    })
+
+    let scrollingTimer;
+
+    function handleScroll() {
+      
+      clearTimeout(scrollingTimer);
+
+      
+      scrollingTimer = setTimeout(function () {
+        upANDdownBtns.forEach(btn => {
+          btn.style.display = 'flex';
+        })
+      }, 200);
+    }
+
+    
+    window.addEventListener("scroll", handleScroll);
+
+
+  })
+
 
   return (
     <div id='heroSection' className='transition-all duration-500 ease-in lg:mt-0 mt-[67px] lg:p-20'>
@@ -39,6 +85,12 @@ export default function Hero() {
         <div id='rightPart' className=''>
           <img src={img} alt="adil picture" className='' />
         </div>
+      </div>
+      <div onClick={toTop} className='directionBtn w-14 h-14 bg-[#177771] rounded-full flex justify-center items-center text-white fixed lg:right-4 right-3 bottom-6 cursor-pointer active:scale-110 transition-all'>
+        <i class="fa-solid fa-arrow-up text-2xl"></i>
+      </div>
+      <div onClick={toBottom} className=' directionBtn w-14 h-14 bg-[#177771] rounded-full flex justify-center items-center text-white fixed lg:left-4 left-3 bottom-6 cursor-pointer active:scale-110 transition-all'>
+        <i class="fa-solid fa-arrow-down text-2xl"></i>
       </div>
     </div>
   )

@@ -18,7 +18,7 @@ export default function AboutMe() {
     return (
         <section id='aboutMe' className=' lg:pl-[40px] flex flex-col justify-center items-center gap-10'>
             <div id='' className='flex flex-col justify-center items-center text-center gap-5'>
-                <q className='text-4xl'>Decoding My Digital Story</q>
+                <q className='text-4xl'> Decoding My Digital Story </q>
                 <p className='text-xl lg:w-[60%]'>{aboutMe[0].description}</p>
             </div>
             <div id="infoAboutMe" className='w-full flex justify-center items-center gap-12 lg:px-48 flex-col'>
