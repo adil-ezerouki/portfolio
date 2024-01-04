@@ -60,9 +60,11 @@ export default function Header() {
 
 
 
+
+
   return (
     <>
-      <header className={`w-full h-20 flex justify-between items-center shadow-lg lg:px-[40px]  px-3 fixed top-0 ${isDarkMode ? "bg-[#243439]" : 'bg-[#fff]'}`}>
+      <header className={`w-full h-20 flex justify-between items-center shadow-lg lg:px-[40px]  px-3 sticky top-0 ${isDarkMode ? "bg-[#243439]" : 'bg-[#fff]'}`}>
         <div id='logo' className='lg:w-32 w-20'>
           <img src={logo} alt="website logo" className='lg:w-32 w-20' />
         </div>

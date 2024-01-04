@@ -36,10 +36,10 @@ export default function AboutMe() {
                         </div>
 
                         <div id="social-Media" className='flex gap-6 '>
-                            <a target='blank' href={aboutMe[0].social_media.linkedIn}><i class="fa-brands fa-linkedin-in bg-[#177771]  text-2xl   text-white p-2 w-12 h-12 rounded-full hover:scale-125 duration-150"></i></a>
-                            <a target='blank' href={aboutMe[0].social_media.whatsapp}><i class="fa-brands fa-whatsapp bg-[#177771] text-2xl  text-white p-2 w-12 h-12 rounded-full hover:scale-125 duration-150"></i></a>
-                            <a target='blank' href={aboutMe[0].social_media.github}><i class="fa-brands fa-github bg-[#177771] text-2xl text-white p-2 w-12 h-12 rounded-full hover:scale-125 duration-150"></i></a>
-                            <a target='blank' href={`mailto:${aboutMe[0].email}`}><i class="fa-regular fa-envelope bg-[#177771] text-2xl text-white p-2 w-12 h-12 rounded-full hover:scale-125 duration-150"></i></a>
+                            <a target='blank' href={aboutMe[0].social_media.linkedIn}><i className="fa-brands fa-linkedin-in bg-[#177771]  text-2xl   text-white p-2 w-12 h-12 rounded-full hover:scale-125 duration-150"></i></a>
+                            <a target='blank' href={aboutMe[0].social_media.whatsapp}><i className="fa-brands fa-whatsapp bg-[#177771] text-2xl  text-white p-2 w-12 h-12 rounded-full hover:scale-125 duration-150"></i></a>
+                            <a target='blank' href={aboutMe[0].social_media.github}><i className="fa-brands fa-github bg-[#177771] text-2xl text-white p-2 w-12 h-12 rounded-full hover:scale-125 duration-150"></i></a>
+                            <a target='blank' href={`mailto:${aboutMe[0].email}`}><i className="fa-regular fa-envelope bg-[#177771] text-2xl text-white p-2 w-12 h-12 rounded-full hover:scale-125 duration-150"></i></a>
 
                         </div>
                     </div>
@@ -65,44 +65,7 @@ export default function AboutMe() {
 
                 <div id='technologies' className=' flex-grow w-full bg-[#243439]  text-white h-96  rounded-2xl p-6 pb-0 flex flex-col justify-center gap-10'>
                     <h2 className='text-4xl font-bold text-center'> <span className='text-[#FF7F40]'>Technologies</span> I use </h2>
-                    {/* <div id='technologies-logos' className='flex justify-center items-center gap-14'>
-
-                        <div className='flex flex-col items-center justify-center gap-6'>
-                            <h1 className='text-2xl'>Back-End</h1>
-                            <div className='flex flex-wrap justify-center gap-6'>
-
-                                <img src={phpIcon} alt="css icon" className='w-24 ' />
-                                <img src={laravelIcon} alt="css icon" className='w-24 ' />
-                            </div>
-                        </div>
-                        <div className='flex flex-col items-center justify-center gap-6'>
-                            <h1 className='text-2xl'>Front-End</h1>
-                            <div className='flex flex-wrap justify-center gap-6'>
-
-                                <div className='flex'>
-                                    <img src={htmlIcon} alt="html icon" className='w-24 ' />
-                                    <img src={cssIcon} alt="css icon" className='w-24 ' />
-                                    <img src={jsIcon} alt="css icon" className='w-24 ' />
-                                </div>
-
-                                <div className='flex'>
-                                    <img src={bootstrapIcon} alt="css icon" className='w-24 ' />
-                                    <img src={tailwindIcon} alt="css icon" className='w-24 ' />
-                                    <img src={reactIcon} alt="react icon" className='w-24 ' />
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div className='flex flex-col items-center justify-center gap-6'>
-
-                            <h1 className='text-2xl'>Database</h1>
-                            <div className='flex flex-wrap justify-center gap-6'>
-                                <img src={mysqlIcon} alt="css icon" className='w-24 ' />
-                                <img src={mongoDBIcon} alt="css icon" className='w-24 ' />
-                            </div>
-                        </div>
-                    </div> */}
+                    
 
                     <div className='flex justify-center items-end h-full'>
                             <img className='w-full' src={devPic} alt=""  />

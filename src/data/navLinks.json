@@ -25,7 +25,7 @@
     },
     {
         "name": "Portfolio",
-        "link": "#",
+        "link": "#portfolio",
         "viewport": {
             "from": 1100,
             "to": 1300

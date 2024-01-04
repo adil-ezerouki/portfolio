@@ -21,6 +21,20 @@ export default function Hero() {
     });
   }
 
+
+  useEffect(()=> {
+    const upANDdownBtns = document.querySelectorAll(' .directionBtn ')
+    window.addEventListener('scroll',()=> {
+      let scrollPosition = document.documentElement.scrollTop;
+      let bodyHeight = body.scrollHeight - 200;
+
+      scrollPosition <= 200  ? upANDdownBtns[0].className = 'hidden' : upANDdownBtns[0].className = 'directionBtn w-14 h-14 bg-[#177771] rounded-full flex justify-center items-center text-white fixed lg:right-4 right-3 bottom-6 cursor-pointer active:scale-110 transition-all';
+      scrollPosition >= (body.clientHeight - 200) ? upANDdownBtns[1].className = 'hidden' : upANDdownBtns[1].className = 'directionBtn w-14 h-14 bg-[#177771] rounded-full flex justify-center items-center text-white fixed lg:left-4 left-3 bottom-6 cursor-pointer active:scale-110 transition-all'
+      scrollPosition >= 6325 ? console.log('MZYAN') : console.log([bodyHeight,scrollPosition])
+
+    })
+  })
+
   useEffect(() => {
     const upANDdownBtns = document.querySelectorAll(' .directionBtn ')
 
@@ -87,10 +101,10 @@ export default function Hero() {
         </div>
       </div>
       <div onClick={toTop} className='directionBtn w-14 h-14 bg-[#177771] rounded-full flex justify-center items-center text-white fixed lg:right-4 right-3 bottom-6 cursor-pointer active:scale-110 transition-all'>
-        <i class="fa-solid fa-arrow-up text-2xl"></i>
+        <i className="fa-solid fa-arrow-up text-2xl"></i>
       </div>
       <div onClick={toBottom} className=' directionBtn w-14 h-14 bg-[#177771] rounded-full flex justify-center items-center text-white fixed lg:left-4 left-3 bottom-6 cursor-pointer active:scale-110 transition-all'>
-        <i class="fa-solid fa-arrow-down text-2xl"></i>
+        <i className="fa-solid fa-arrow-down text-2xl"></i>
       </div>
     </div>
   )

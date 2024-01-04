@@ -4,10 +4,7 @@
 
 
 section,
-#heroSection, header{
+#heroSection, header,footer{
     padding: 30px 40px;
 }
 
-body {
-    height: 4000px !important;
-}
